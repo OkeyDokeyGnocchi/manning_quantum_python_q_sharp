@@ -10,8 +10,9 @@ print(directions_in_feet)
 
 # Exercise C.1: Unit conversion
 #  - What are 25 meters west and 110 meters north in feet?
-#  - North and East are positive
-#  - West and South are negative
+#  - In terms of thinking of cardinal directions like a 2D graph:
+#    - North and East are positive
+#    - West and South are negative
 conversion_factor = 3.28
 c1_array_meters = np.array([[-25], [110]])
 c1_array_feet = c1_array_meters * conversion_factor
