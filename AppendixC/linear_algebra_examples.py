@@ -49,3 +49,14 @@ print(c1_array_feet)
 # Result a2^x + b2^y
 # 2^ax * 2^by != a2^x + b2^y
 # Not Linear
+
+# Computing f(np.array([[2], [3]]))
+# Basis horiz = [[1], [0]], vert [[0], [1]]
+horizontal = np.array([[1], [0]])
+vertical = np.array([[0], [1]])
+vec = 2 * horizontal + 3 * vertical
+print(vec)
+f_horizontal = np.array([[1], [1]])
+f_vertical = np.array([[1], [-1]])
+new_vec = 2 * f_horizontal + 3 * f_vertical
+print(new_vec)
