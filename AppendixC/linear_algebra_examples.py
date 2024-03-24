@@ -73,3 +73,14 @@ g_horizontal = np.array([[2.3], [-3.1]])
 g_vertical = np.array([[-5.2], [0.7]])
 c3_g_vec = 2 * g_horizontal + -2 * g_vertical
 print(f'{c3_g_vec}\n')
+
+# Exercise C.4 - Matrix Multiplication
+# Let X be the matrix [[0,1],[1,0]]
+# Let Y be the vector [[2],[3]]
+# Compute x->Y and XX
+# @ is matrix multiplication
+print("Exercise C.4:")
+c4_x = np.array([[0,1],[1,0]])
+c4_y = np.array([[2],[3]])
+print(c4_x @ c4_y)
+print(f'{c4_x @ c4_x}\n')
