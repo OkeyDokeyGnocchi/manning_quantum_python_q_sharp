@@ -72,4 +72,4 @@ print("Exercise C.3:")
 g_horizontal = np.array([[2.3], [-3.1]])
 g_vertical = np.array([[-5.2], [0.7]])
 c3_g_vec = 2 * g_horizontal + -2 * g_vertical
-print(c3_g_vec)
+print(f'{c3_g_vec}\n')
