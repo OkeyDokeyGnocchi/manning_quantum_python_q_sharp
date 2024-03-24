@@ -84,3 +84,10 @@ c4_x = np.array([[0,1],[1,0]])
 c4_y = np.array([[2],[3]])
 print(c4_x @ c4_y)
 print(f'{c4_x @ c4_x}\n')
+
+# Exercise C.5 - Vector Normalization
+# Given vector [[2],[3]]:
+# Find a vector pointing in same direction w/ len 1
+print("Exercise C.5:")
+c5_vec = np.array([[2],[3]])
+print(f'{c5_vec / np.linalg.norm(c5_vec)}\n')
