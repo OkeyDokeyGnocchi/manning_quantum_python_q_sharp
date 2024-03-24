@@ -59,4 +59,17 @@ print(vec)
 f_horizontal = np.array([[1], [1]])
 f_vertical = np.array([[1], [-1]])
 new_vec = 2 * f_horizontal + 3 * f_vertical
-print(new_vec)
+print(f'{new_vec}\n')
+
+# Exercise C.3
+# Linear function g such that:
+#  - g([[1], [0]]) = [[2.3], [-3.1]]
+#  - g([[0], [1]]) = [[-5.2], [0.7]]
+# Compute g([[2], [-2]])
+# To solve: set g_horiz and g_vert to the ref values above
+#    then multiply by 2 and -2, respectively
+print("Exercise C.3:")
+g_horizontal = np.array([[2.3], [-3.1]])
+g_vertical = np.array([[-5.2], [0.7]])
+c3_g_vec = 2 * g_horizontal + -2 * g_vertical
+print(c3_g_vec)
