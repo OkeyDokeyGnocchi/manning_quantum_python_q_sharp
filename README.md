@@ -4,5 +4,8 @@ Resources created while working through Manning Learn Quantum Computing with Pyt
 Manning Publications' *Learn Quantum Computing with Python and Q#*
 - https://www.manning.com/books/learn-quantum-computing-with-python-and-q-sharp
 
+### Current Status (Page Number)
+- 54
+
 ### Current Status (Parts Completed)
 - 0/3
