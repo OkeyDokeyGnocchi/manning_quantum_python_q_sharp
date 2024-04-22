@@ -8,6 +8,11 @@ class Qubit(metaclass=ABCMeta):
     def h(self):
         pass
 
+    # Define quantum NOT method
+    @abstractmethod
+    def x(self):
+        pass
+
     # Define measuring method
     @abstractmethod
     def measure(self) -> bool:

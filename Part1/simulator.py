@@ -4,6 +4,7 @@ from interface import QuantumDevice, Qubit
 # Set up some constants for use later
 KET_0 = np.array([[1], [0]], dtype=complex)
 H = np.array([[1, 1], [1, -1]], dtype=complex) / np.sqrt(2)
+X = np.array([0, 1], [1, 0], dtype=complex) / np.sqrt(2)
 
 # Define the class for simulated qubits
 class SimulatedQubit(Qubit):
@@ -13,6 +14,10 @@ class SimulatedQubit(Qubit):
     # Define Hadamard op for self
     def h(self):
         self.state = H @ self.state
+
+    # Define quantum NOT method
+    def x(self):
+        self.state = X @ self.state
 
     # Define measuring method
     def measure(self) -> bool:
