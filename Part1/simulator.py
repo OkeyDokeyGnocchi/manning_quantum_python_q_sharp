@@ -4,7 +4,7 @@ from interface import QuantumDevice, Qubit
 # Set up some constants for use later
 KET_0 = np.array([[1], [0]], dtype=complex)
 H = np.array([[1, 1], [1, -1]], dtype=complex) / np.sqrt(2)
-X = np.array([0, 1], [1, 0], dtype=complex) / np.sqrt(2)
+X = np.array([[0, 1], [1, 0]], dtype=complex) / np.sqrt(2)
 
 # Define the class for simulated qubits
 class SimulatedQubit(Qubit):
