@@ -66,6 +66,10 @@ def simulate_bb84(num_bits: int) -> tuple:
 
     return key
 
+# Create function for one time padding with key
+def one_time_pad(msg: List[bool], key: List[bool]) -> List[bool]:
+    return [msg_bit ^ key_bit for (msg_bit, key_bit) in zip(msg, key)]
+
 
 if __name__ == '__main__':
     # Define local and remote quantum devices
@@ -74,4 +78,30 @@ if __name__ == '__main__':
 
     # Send a single qubit
     #print(send_single_bit_bb84(local_device, remote_device))
-    simulate_bb84(8)
+    
+    # Simulate bb84 with an 8-bit key
+    #simulate_bb84(8)
+
+    print("\nRunning bb84 message enc/dec sim\n")
+    print("Creating 96 bit key")
+    key = simulate_bb84(96)
+    print(f"Created key: {convert_to_hex(key)}")
+    message = [
+1, 1, 0, 1, 1, 0, 0, 0,
+0, 0, 1, 1, 1, 1, 0, 1,
+1, 1, 0, 1, 1, 1, 0, 0,
+1, 0, 0, 1, 0, 1, 1, 0,
+1, 1, 0, 1, 1, 0, 0, 0,
+0, 0, 1, 1, 1, 1, 0, 1,
+1, 1, 0, 1, 1, 1, 0, 0,
+0, 0, 0, 0, 1, 1, 0, 1,
+1, 1, 0, 1, 1, 0, 0, 0,
+0, 0, 1, 1, 1, 1, 0, 1,
+1, 1, 0, 1, 1, 1, 0, 0,
+1, 0, 1, 1, 1, 0, 1, 1
+]
+    print(f"\nUsing key to send message: {convert_to_hex(message)}")
+    encrypted_msg = one_time_pad(message, key)
+    print(f"Decrypting message: {convert_to_hex(encrypted_msg)}")
+    decrypted_msg = one_time_pad(encrypted_msg, key)
+    print(f"Decrypted message is: {convert_to_hex(decrypted_msg)}")
