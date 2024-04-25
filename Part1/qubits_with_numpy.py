@@ -39,3 +39,11 @@ print("a:")
 print(f'{np.abs(ket_minus.conj().transpose() @ ket0) ** 2}')
 print("b:")
 print(f'{np.abs(ket_minus.conj().transpose() @ ket1) ** 2}')
+
+# Exercise 3.4
+print("\nExercise 3.4")
+## If we had the ciphertext 10100101 and the key 00100110, what message was originally sent?
+cipher = [bit == '1' for bit in '10100101']
+key = [bit == '1' for bit in '00100110']
+cleartext = [cipher_bit ^ key_bit for (cipher_bit, key_bit) in zip(cipher, key)]
+print(f'{"".join("1" if bit else "0" for bit in cleartext)}')
