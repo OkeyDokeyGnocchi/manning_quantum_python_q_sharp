@@ -5,7 +5,7 @@ Manning Publications' *Learn Quantum Computing with Python and Q#*
 - https://www.manning.com/books/learn-quantum-computing-with-python-and-q-sharp
 
 ### Current Status (Page Number)
-- 62
+- 66
 
 ### Current Status (Parts Completed)
 - 0/3

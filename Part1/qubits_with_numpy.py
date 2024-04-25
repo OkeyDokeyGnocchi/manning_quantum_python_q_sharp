@@ -8,6 +8,10 @@ ket1 = np.array([[0], [1]])
 ket_plus = (ket0 + ket1) / np.sqrt(2)
 print(ket_plus)
 
+# Defining |->
+ket_minus = (ket0 - ket1) / np.sqrt(2)
+print(ket_minus)
+
 # Defining Hadamard op
 H = np.array([[1, 1], [1, -1]]) / np.sqrt(2)
 
@@ -22,3 +26,16 @@ print(f'NOT gate ket0: {X @ ket0}')
 print(f'Compare NOT ket0 and ket1: {(X @ ket0 == ket1).all()}')
 # Showing NOT doesn't change Hadamard ket0; should return True
 print(f'NOT Hadamard ket0: {(X @ H @ ket0 == H @ ket0).all()}')
+
+# Exercise 3.2
+## Check that |0> = (ket0 + ket1)/sqrt(2)
+print(f'Verifying ket0 is superposition of |+> and |->: {(ket0 == (ket_plus + ket_minus)/np.sqrt(2)).all()}')
+
+# Exercise 3.3
+print("\nExercise 3.3")
+## a) Calculate the probability of getting the measurement outcome |–⟩ when measuring the |0⟩ state in the |–⟩ direction
+"|<-|0>|^2 == ((<-|0>) / np.sqrt(2)) ** 2"
+print("a:")
+print(f'{np.abs(ket_minus.conj().transpose() @ ket0) ** 2}')
+print("b:")
+print(f'{np.abs(ket_minus.conj().transpose() @ ket1) ** 2}')
